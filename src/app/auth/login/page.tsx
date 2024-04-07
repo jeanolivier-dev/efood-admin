@@ -11,11 +11,13 @@ export default function Login() {
           <h1>Ravie de vous revoir</h1>
         </div>
 
-        <div className={styles.inputBox}>
-          <input type="text" placeholder="Nom d'utilisateur" required />
-        </div>
-        <div className={styles.inputBox}>
-          <input type="password" placeholder="Mot de passe" required />
+        <div className={styles.inputArea}>
+          <div className={styles.inputBox}>
+            <input type="text" placeholder="Nom d'utilisateur" required />
+          </div>
+          <div className={styles.inputBox}>
+            <input type="password" placeholder="Mot de passe" required />
+          </div>
         </div>
 
         <div className={styles.rememberForgot}>
@@ -32,7 +34,8 @@ export default function Login() {
 
         <div className={styles.registerLink}>
           <p>
-            Vous n&apos;avez pas de compte ? <a href="#">Créer un compte</a>
+            Vous n&apos;avez pas de compte ?{" "}
+            <a href="/auth/signin">Créer un compte</a>
           </p>
         </div>
       </form>

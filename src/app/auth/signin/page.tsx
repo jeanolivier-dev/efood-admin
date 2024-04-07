@@ -9,25 +9,26 @@ export default function SignIn() {
           <Image src="/logo-e-food.png" width="200" height="80" alt="logo" />
           <h1>Bienvenue</h1>
         </div>
-
-        <div className={styles.inputBox}>
-          <input type="text" placeholder="Nom d'utilisateur" required />
-        </div>
-        <div className={styles.inputBox}>
-          <input type="text" placeholder="Nom du restaurant" required />
-        </div>
-        <div className={styles.inputBox}>
-          <input type="tel" placeholder="Téléphone" required />
-        </div>
-        <div className={styles.inputBox}>
-          <input type="password" placeholder="Mot de passe" required />
-        </div>
-        <div className={styles.inputBox}>
-          <input
-            type="password"
-            placeholder="Confirmer le mot de passe"
-            required
-          />
+        <div className={styles.inputArea}>
+          <div className={styles.inputBox}>
+            <input type="text" placeholder="Nom d'utilisateur" required />
+          </div>
+          <div className={styles.inputBox}>
+            <input type="text" placeholder="Nom du restaurant" required />
+          </div>
+          <div className={styles.inputBox}>
+            <input type="tel" placeholder="Téléphone" required />
+          </div>
+          <div className={styles.inputBox}>
+            <input type="password" placeholder="Mot de passe" required />
+          </div>
+          <div className={styles.inputBox}>
+            <input
+              type="password"
+              placeholder="Confirmer le mot de passe"
+              required
+            />
+          </div>
         </div>
 
         <button type="submit" className={styles.signInBtn}>
