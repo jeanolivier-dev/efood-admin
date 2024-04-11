@@ -11,6 +11,7 @@ import { IoRestaurantOutline } from "react-icons/io5";
 import { BiFoodMenu } from "react-icons/bi";
 import { IoLogOutOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
+import { MdPowerSettingsNew } from "react-icons/md";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -73,13 +74,13 @@ const Sidebar = () => {
           <p>Commandes</p>
         </Link>
         <Link
-          href="/clients"
+          href="/utilisateurs"
           className={`${styles.link} ${
-            pathname === "/clients" ? styles.active : ""
+            pathname === "/utilisateurs" ? styles.active : ""
           }`}
         >
           <HiOutlineUsers />
-          <p>Clients</p>
+          <p>Utilisateurs</p>
         </Link>
         <Link
           href="/configurations"
@@ -92,8 +93,7 @@ const Sidebar = () => {
         </Link>
       </nav>
       <Link href="#" className={styles.logOut}>
-        <IoLogOutOutline />
-        <p>Déconnexion</p>
+        <IoLogOutOutline size={30} />
       </Link>
     </div>
   );

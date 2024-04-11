@@ -13,3 +13,14 @@
   display: flex;
   justify-content: space-between;
 }
+
+.addBtn {
+  width: 70px;
+  height: 40px;
+  background: #dcb341;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}

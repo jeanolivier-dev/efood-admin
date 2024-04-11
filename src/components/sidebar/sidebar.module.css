@@ -50,28 +50,35 @@
 
 .link {
   display: flex;
+  width: 170px;
   align-items: center;
   padding: 10px;
   gap: 5px;
 }
 
+.active {
+  color: #fff;
+  background-color: #8b571d;
+  border-radius: 40px;
+}
+
+.link:hover {
+  color: #fff;
+  background-color: #ae7720;
+  border-radius: 40px;
+}
+
 .logOut {
   display: flex;
+  width: 40px;
+  height: 40px;
   align-items: center;
-  font-weight: 500;
   padding: 10px;
   gap: 5px;
 }
 
 .logOut:hover {
-  background-color: rgba(225, 82, 82, 0.611);
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-}
-
-.link:hover,
-.active {
-  background-color: #dcb341;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  background-color: rgba(226, 87, 87, 0.9);
+  border-radius: 50%;
 }

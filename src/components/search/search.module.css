@@ -1,0 +1,20 @@
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ae7720;
+  background-color: #f6efcb;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #ae7720;
+}
+
+.input::placeholder {
+  color: #ae7720;
+}

@@ -17,7 +17,10 @@ export default function SignIn() {
             <input type="text" placeholder="Nom du restaurant" required />
           </div>
           <div className={styles.inputBox}>
-            <input type="tel" placeholder="Téléphone" required />
+            <input type="email" placeholder="Adresse mail" required />
+          </div>
+          <div className={styles.inputBox}>
+            <input type="phone" placeholder="Téléphone" />
           </div>
           <div className={styles.inputBox}>
             <input type="password" placeholder="Mot de passe" required />

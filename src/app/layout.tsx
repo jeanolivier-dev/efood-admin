@@ -4,7 +4,7 @@ import "./globals.css";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "E-FOOD - Application de menu digital",
+  title: "EFOOD - Application de menu digital",
   description: "Application de menu digital",
 };
 

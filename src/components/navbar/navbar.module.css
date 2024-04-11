@@ -24,14 +24,19 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #bebebe;
+  background-color: #f6efcb;
   padding: 10px;
   border-radius: 10px;
+  color: #ae7720;
 }
 
 .input {
   background-color: transparent;
   border: none;
   outline: none;
-  color: var(--text);
+  color: #ae7720;
+}
+
+.input::placeholder {
+  color: #ae7720;
 }
