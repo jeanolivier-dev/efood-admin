@@ -1,51 +1,51 @@
 "use client";
 
-import styles from "./chart.module.css";
 import {
-  LineChart,
+  Legend,
   Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
 } from "recharts";
+import styles from "./chart.module.css";
 
 const data = [
   {
-    name: "lundi",
-    visit: 3000,
-    click: 1398,
+    jour: "lundi",
+    visites: 3000,
+    clics: 1398,
   },
   {
-    name: "Mardi",
-    visit: 2000,
-    click: 3800,
+    jour: "Mardi",
+    visites: 2000,
+    clics: 3800,
   },
   {
-    name: "Mercredi",
-    visit: 2780,
-    click: 3908,
+    jour: "Mercredi",
+    visites: 2780,
+    clics: 3908,
   },
   {
-    name: "Jeudi",
-    visit: 1890,
-    click: 4800,
+    jour: "Jeudi",
+    visites: 1890,
+    clics: 4800,
   },
   {
-    name: "Vendredi",
-    visit: 3000,
-    click: 1398,
+    jour: "Vendredi",
+    visites: 3000,
+    clics: 1398,
   },
   {
-    name: "Samedi",
-    visit: 2390,
-    click: 3800,
+    jour: "Samedi",
+    visites: 2390,
+    clics: 3800,
   },
   {
-    name: "Dimanche",
-    visit: 3000,
-    click: 1398,
+    jour: "Dimanche",
+    visites: 3000,
+    clics: 1398,
   },
 ];
 
@@ -65,19 +65,19 @@ export default function Chart() {
             bottom: 5,
           }}
         >
-          <XAxis dataKey="name" />
+          <XAxis dataKey="jour" />
           <YAxis />
           <Tooltip contentStyle={{ background: "#f6efcb", border: "none" }} />
           <Legend />
           <Line
             type="monotone"
-            dataKey="visit"
+            dataKey="visites"
             stroke="#8884d8"
             strokeDasharray="5 5"
           />
           <Line
             type="monotone"
-            dataKey="click"
+            dataKey="clics"
             stroke="#82ca9d"
             strokeDasharray="3 4 5 2"
           />
