@@ -35,7 +35,7 @@ export default function Login() {
         <div className={styles.registerLink}>
           <p>
             Vous n&apos;avez pas de compte ?{" "}
-            <a href="/auth/signin">Créer un compte</a>
+            <a href="/auth/signup">Créer un compte</a>
           </p>
         </div>
       </form>

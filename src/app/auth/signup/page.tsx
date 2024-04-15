@@ -1,10 +1,23 @@
-import styles from "./SignIn.module.css";
+"use client";
+import styles from "./SignUp.module.css";
 import Image from "next/image";
+import { FormEvent } from "react";
 
-export default function SignIn() {
+export default function SignUp() {
+  function submitHandler(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const userName = e.target[0].value;
+    const restaurantName = e.target[1].value;
+    const email = e.target[2].value;
+    const phoneNumber = e.target[3].value;
+    const password = e.target[4].value;
+    const passwordConfirm = e.target[5].value;
+    console.log(userName);
+  }
+
   return (
     <div className={styles.container}>
-      <form className={styles.wrapper} action="">
+      <form className={styles.wrapper} onSubmit={(e) => submitHandler(e)}>
         <div className={styles.logoWelcome}>
           <Image src="/logo-e-food.png" width="200" height="80" alt="logo" />
           <h1>Bienvenue</h1>
