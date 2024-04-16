@@ -6,7 +6,6 @@
   margin-top: 20px;
   background-color: var(--bgSoft);
   border-radius: 10px;
-  height: 80vh;
 }
 
 .topBar {
@@ -20,7 +19,7 @@
   color: #fff;
   background: #ae7720;
   border: none;
-  border-radius: 50%;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
@@ -29,4 +28,44 @@
 .addBtn:hover {
   color: #fff;
   background: #ca9928;
+}
+
+.table {
+  width: 100%;
+}
+
+.table td {
+  padding: 10px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userImage {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.view {
+  background-color: teal;
+}
+
+.delete {
+  background-color: crimson;
 }

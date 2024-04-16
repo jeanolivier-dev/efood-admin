@@ -41,7 +41,7 @@ export default function Rightbar() {
           </p>
           <button className={styles.button}>
             <MdReadMore />
-            Regarder
+            Découvrir
           </button>
         </div>
       </div>

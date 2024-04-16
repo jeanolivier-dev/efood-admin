@@ -60,3 +60,7 @@
   cursor: pointer;
   width: max-content;
 }
+
+.button:hover {
+  background-color: #ca9928;
+}

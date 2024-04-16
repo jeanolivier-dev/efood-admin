@@ -4,7 +4,7 @@ import styles from "./settings.module.css";
 export default function Configurations() {
   return (
     <Layout>
-      <div className={styles.container}>Configurations</div>
+      <div className={styles.container}>Paramètres</div>
     </Layout>
   );
 }
