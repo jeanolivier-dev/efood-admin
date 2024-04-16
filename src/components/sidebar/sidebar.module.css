@@ -10,6 +10,7 @@
   width: 270px;
   padding: 20px;
   overflow-y: auto;
+  min-height: 100vh;
 }
 
 .backOfficeLogo {

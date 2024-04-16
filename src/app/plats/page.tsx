@@ -1,7 +1,7 @@
 import Search from "@/components/search/search";
 import styles from "./plats.module.css";
 import Image from "next/image";
-import user_image from "@/assets/img/user-image.jpeg";
+import product_image from "@/assets/img/noproduct.jpg";
 import Link from "next/link";
 import Pagination from "@/components/pagination/pagination";
 import Layout from "@/components/ui/layout/globalLayout";
@@ -13,7 +13,7 @@ export default function Plats() {
       <div className={styles.container}>
         <div className={styles.topBar}>
           <Search />
-          <Link href="/product/ajouter">
+          <Link href="/plats/ajouter">
             <button className={styles.addBtn}>
               <MdAdd size={30} />
             </button>
@@ -31,7 +31,7 @@ export default function Plats() {
             <td>
               <div className={styles.user}>
                 <Image
-                  src={user_image}
+                  src={product_image}
                   alt=""
                   width={40}
                   height={40}
