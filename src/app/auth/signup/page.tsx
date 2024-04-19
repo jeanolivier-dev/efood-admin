@@ -6,6 +6,7 @@ import { FormEvent } from "react";
 export default function SignUp() {
   function submitHandler(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    /*
     const userName = e.target[0].value;
     const restaurantName = e.target[1].value;
     const email = e.target[2].value;
@@ -13,6 +14,7 @@ export default function SignUp() {
     const password = e.target[4].value;
     const passwordConfirm = e.target[5].value;
     console.log(userName);
+    */
   }
 
   return (

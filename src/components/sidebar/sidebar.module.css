@@ -67,13 +67,13 @@
 .active {
   color: #fff;
   background-color: #8b571d;
-  border-radius: 40px;
+  border-radius: 10px;
 }
 
 .link:hover {
   color: #fff;
   background-color: #ae7720;
-  border-radius: 40px;
+  border-radius: 10px;
 }
 
 .logOut {
@@ -88,5 +88,5 @@
 .logOut:hover {
   color: #fff;
   background-color: #de2b2b;
-  border-radius: 50%;
+  border-radius: 10px;
 }

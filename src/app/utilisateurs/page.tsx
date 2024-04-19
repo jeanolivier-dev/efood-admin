@@ -13,7 +13,7 @@ export default function Utilisateurs() {
       <div className={styles.container}>
         <div className={styles.topBar}>
           <Search />
-          <Link href="/user/ajouter">
+          <Link href="/utilisateurs/ajouter">
             <button className={styles.addBtn}>
               <MdAdd size={30} />
             </button>
