@@ -45,7 +45,7 @@ export default function Plats() {
             <td>02.03.2024</td>
             <td>
               <div className={styles.buttons}>
-                <Link href="/">
+                <Link href="/plats/test">
                   <button className={`${styles.button} ${styles.view}`}>
                     Voir
                   </button>

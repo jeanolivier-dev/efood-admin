@@ -23,15 +23,17 @@ const Sidebar = () => {
         <Image
           className={styles.backOfficeLogo}
           src={logo_efood}
-          width="200"
-          height="80"
+          width="150"
+          height="60"
           alt="logo"
         />
+      </div>
+      <div className={styles.userInformations}>
         <Image
           className={styles.userImage}
           src={user_image}
-          width="50"
-          height="50"
+          width="40"
+          height="40"
           alt="user-image"
         />
         <div className={styles.userDetail}>

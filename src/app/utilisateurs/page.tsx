@@ -47,7 +47,7 @@ export default function Utilisateurs() {
             <td>Active</td>
             <td>
               <div className={styles.buttons}>
-                <Link href="/">
+                <Link href="/utilisateurs/test">
                   <button className={`${styles.button} ${styles.view}`}>
                     Voir
                   </button>
