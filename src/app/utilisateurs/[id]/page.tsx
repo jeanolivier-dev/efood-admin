@@ -37,8 +37,8 @@ export default function SingleUserPage() {
               name="numero de téléphone"
               placeholder="+12345678"
             />
-            <label>Nom d&apos;utilisateur</label>
-            <textarea name="adress" placeholder="New York" />
+            <label>Adresse</label>
+            <textarea name="adress" placeholder="Abidjan, Cocody Centre" />
             <label>Est admin</label>
             <select name="isAdmin" id="isAdmin">
               <option value={"true"}>Oui</option>
