@@ -1,6 +1,7 @@
 "use client";
 import styles from "./SignUp.module.css";
 import Image from "next/image";
+import logo_efood from "@/assets/img/logo-e-food.png";
 import { FormEvent } from "react";
 
 export default function SignUp() {
@@ -21,7 +22,7 @@ export default function SignUp() {
     <div className={styles.container}>
       <form className={styles.wrapper} onSubmit={(e) => submitHandler(e)}>
         <div className={styles.logoWelcome}>
-          <Image src="/logo-e-food.png" width="200" height="80" alt="logo" />
+          <Image src={logo_efood} width="150" height="70" alt="logo" />
           <h1>Bienvenue</h1>
         </div>
         <div className={styles.inputArea}>
