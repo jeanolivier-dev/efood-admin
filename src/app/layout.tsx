@@ -1,5 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import NextAuthSessionProvider from "../../providers/NextAuthSessionProvider";
+import ToastProvider from "../../providers/ToastProvider";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -15,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        <ToastProvider />
+        <NextAuthSessionProvider>{children}</NextAuthSessionProvider>
+      </body>
     </html>
   );
 }

@@ -12,26 +12,34 @@
   background-size: cover;
 }
 
-.wrapper {
-  width: 420px;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(40px);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-  color: #fff;
-  border-radius: 10px;
-  padding: 30px 40px;
+.logoWelcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 .inputArea {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.logoWelcome {
+
+.inputBox {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 420px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(50px);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
 }
 
 .wrapper h1 {
@@ -60,7 +68,7 @@
 }
 
 .inputBox input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff8b;
 }
 
 .rememberForgot {
@@ -79,22 +87,21 @@
   text-decoration: underline;
 }
 
-.signInBtn {
+.loginBtn {
   width: 100%;
   height: 40px;
-  margin-top: 30px;
   background: #ca9928;
   border: none;
   outline: none;
   border-radius: 10px;
   /*box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);*/
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   font-weight: 500;
 }
 
-.signInBtn:hover {
+.loginBtn:hover {
   color: #fff;
   background: #ae7720;
 }
@@ -106,7 +113,7 @@
 }
 
 .registerLink a {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
 }
 

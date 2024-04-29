@@ -36,11 +36,11 @@ export default function Commandes() {
                 <div className={styles.buttons}>
                   <Link href="/">
                     <button className={`${styles.button} ${styles.view}`}>
-                      Modifier
+                      voir
                     </button>
                   </Link>
                   <button className={`${styles.button} ${styles.delete}`}>
-                    Supprimer
+                    Modifier
                   </button>
                 </div>
               </td>
@@ -60,11 +60,11 @@ export default function Commandes() {
                 <div className={styles.buttons}>
                   <Link href="/">
                     <button className={`${styles.button} ${styles.view}`}>
-                      Modifier
+                      Voir
                     </button>
                   </Link>
                   <button className={`${styles.button} ${styles.delete}`}>
-                    Supprimer
+                    Modifier
                   </button>
                 </div>
               </td>
@@ -84,11 +84,11 @@ export default function Commandes() {
                 <div className={styles.buttons}>
                   <Link href="/">
                     <button className={`${styles.button} ${styles.view}`}>
-                      Modifier
+                      Voir
                     </button>
                   </Link>
                   <button className={`${styles.button} ${styles.delete}`}>
-                    Supprimer
+                    Modifier
                   </button>
                 </div>
               </td>
