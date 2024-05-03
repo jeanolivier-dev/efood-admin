@@ -120,5 +120,6 @@
 
 .errors {
   font-size: 11px;
-  color: red;
+  color: rgb(255, 74, 74);
+  margin-right: 20px;
 }

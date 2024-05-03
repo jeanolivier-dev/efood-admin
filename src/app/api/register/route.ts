@@ -18,7 +18,7 @@ export async function POST(req: Request) {
       },
     });
 
-    if (!userAlreadyExist?.id) {
+    if (userAlreadyExist?.id) {
       return new NextResponse("Utilisateur déjà existant", { status: 500 });
     }
 
