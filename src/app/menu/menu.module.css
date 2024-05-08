@@ -6,7 +6,6 @@
   margin-top: 20px;
   background-color: var(--bgSoft);
   border-radius: 10px;
-  height: 80vh;
 }
 
 .topBar {
@@ -29,6 +28,10 @@
 .addBtn:hover {
   color: #fff;
   background: #ca9928;
+}
+
+.table {
+  width: 100%;
 }
 
 .table td {

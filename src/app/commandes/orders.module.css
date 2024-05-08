@@ -6,7 +6,6 @@
   margin-top: 20px;
   background-color: var(--bgSoft);
   border-radius: 10px;
-  height: 80vh;
 }
 
 .topBar {
@@ -17,6 +16,10 @@
 .table {
   width: 100%;
   font-size: 14px;
+}
+
+.table {
+  width: 100%;
 }
 
 .table td {

@@ -22,11 +22,20 @@ export const authOptions: AuthOptions = {
           },
         });
 
-        if (!user || !user.id || !user.hashedPassword) {
+        if (!user || !user.hashedPassword) {
           throw new Error("Informations d'identification non valides");
         }
 
-        const currentHashedPassword = await bcrypt.hash(
+        const verifyPassword = await bcrypt.compare(
+          credentials.password,
+          user.hashedPassword
+        );
+
+        if (!verifyPassword) {
+          throw new Error("Mot de passe non valide");
+        }
+
+        /*const currentHashedPassword = await bcrypt.hash(
           credentials.password,
           12
         );
@@ -34,11 +43,15 @@ export const authOptions: AuthOptions = {
         if (currentHashedPassword !== user.hashedPassword) {
           throw new Error("Informations d'identification non valides");
         }
-
+      */
         return user;
       },
     }),
   ],
+
+  pages: {
+    signIn: "/login",
+  },
 
   secret: process.env.NEXTAUTH_SECRET,
   session: { strategy: "jwt" },

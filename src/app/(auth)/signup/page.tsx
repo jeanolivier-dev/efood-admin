@@ -1,9 +1,10 @@
 "use client";
 import styles from "./SignUp.module.css";
 import Image from "next/image";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
 import logo_efood from "@/assets/img/logo-e-food.png";
 
 const signupSchema = z
@@ -25,20 +26,23 @@ export default function SignUp() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<TSignupSchema>({
     resolver: zodResolver(signupSchema),
   });
 
+  const router = useRouter();
+
   async function onSubmit(data: TSignupSchema) {
-    fetch("/api/register", {
+    const res = await fetch("/api/register", {
       method: "POST",
       body: JSON.stringify({
         email: data.email,
         password: data.password,
       }),
-    }).then((data) => console.log(data));
+    });
+
+    if (res.ok) router.push("/login");
   }
 
   return (

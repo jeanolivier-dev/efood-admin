@@ -2,6 +2,7 @@ import Layout from "@/components/ui/layout/globalLayout";
 import styles from "./orders.module.css";
 import Search from "@/components/search/search";
 import Link from "next/link";
+import Pagination from "@/components/pagination/pagination";
 
 export default function Commandes() {
   return (
@@ -95,6 +96,7 @@ export default function Commandes() {
             </tr>
           </tbody>
         </table>
+        <Pagination />
       </div>
     </Layout>
   );
