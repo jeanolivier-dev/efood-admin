@@ -13,6 +13,7 @@ import { IoRestaurantOutline } from "react-icons/io5";
 import { BiFoodMenu } from "react-icons/bi";
 import { IoLogOutOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
+import { signOut } from "next-auth/react";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -95,9 +96,9 @@ const Sidebar = () => {
           <p>Paramètres</p>
         </Link>
       </nav>
-      <Link href="#" className={styles.logOut}>
+      <button onClick={() => signOut()} className={styles.logOut}>
         <IoLogOutOutline size={40} />
-      </Link>
+      </button>
     </div>
   );
 };

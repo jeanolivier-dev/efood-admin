@@ -89,10 +89,15 @@
   align-items: center;
   padding: 10px;
   gap: 5px;
+  background-color: #e06868;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
 }
 
 .logOut:hover {
   color: #fff;
   background-color: #de2b2b;
   border-radius: 10px;
+  border: none;
 }

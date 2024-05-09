@@ -34,16 +34,6 @@ export const authOptions: AuthOptions = {
         if (!verifyPassword) {
           throw new Error("Mot de passe non valide");
         }
-
-        /*const currentHashedPassword = await bcrypt.hash(
-          credentials.password,
-          12
-        );
-
-        if (currentHashedPassword !== user.hashedPassword) {
-          throw new Error("Informations d'identification non valides");
-        }
-      */
         return user;
       },
     }),
@@ -51,6 +41,16 @@ export const authOptions: AuthOptions = {
 
   pages: {
     signIn: "/login",
+  },
+
+  callbacks: {
+    async jwt({ token, user }) {
+      return { ...token, ...user };
+    },
+    async session({ session, token, user }) {
+      session.user = token;
+      return session;
+    },
   },
 
   secret: process.env.NEXTAUTH_SECRET,
