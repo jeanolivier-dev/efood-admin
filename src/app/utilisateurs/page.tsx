@@ -38,7 +38,7 @@ export default function Utilisateurs() {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
+                Restaurant La Tulipe
               </div>
             </td>
             <td>john@gmail.com</td>

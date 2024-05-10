@@ -18,6 +18,11 @@ export default function SingleUserPage() {
             <input type="text" name="menu" placeholder="Entrées" />
             <label>Description</label>
             <textarea name="desc" placeholder="Lorem ipsum" />
+            <label>En ligne</label>
+            <select name="isActive" id="isActive">
+              <option value={"true"}>Oui</option>
+              <option value={"false"}>Non</option>
+            </select>
             <button>Enregistrer</button>
           </form>
         </div>

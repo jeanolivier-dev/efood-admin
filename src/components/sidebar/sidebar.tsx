@@ -38,8 +38,7 @@ const Sidebar = () => {
           alt="user-image"
         />
         <div className={styles.userDetail}>
-          <span className={styles.userName}>John Doe</span>
-          <span className={styles.userTitle}>Restaurant La Tulipe</span>
+          <span className={styles.userTitle}>Admin</span>
         </div>
       </div>
       <nav className={styles.menuList}>

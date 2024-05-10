@@ -25,15 +25,19 @@
 .form input::placeholder,
 .form textarea::placeholder {
   color: var(--text);
+  
 }
 
 .form input,
 .form select {
   width: 45%;
+
 }
 
 .form textarea {
   width: 100%;
+
+ 
 }
 
 .form button {
@@ -44,6 +48,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
 }
 
 .form button:hover {

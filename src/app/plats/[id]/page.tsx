@@ -23,12 +23,18 @@ export default function SingleUserPage() {
             />
             <label>Prix</label>
             <input type="number" name="prix" placeholder="500" />
+            <label>Menu</label>
             <select name="menu" id="menu">
               <option value="general">Choisir un Menu</option>
               <option value="entrées">Entrées</option>
               <option value="plats">Plats</option>
               <option value="desserts">Desserts</option>
               <option value="boissons">Boissons</option>
+            </select>
+            <label>En ligne</label>
+            <select name="isActive" id="isActive">
+              <option value={"true"}>Oui</option>
+              <option value={"false"}>Non</option>
             </select>
             <button>Enregistrer</button>
           </form>
