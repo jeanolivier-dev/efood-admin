@@ -22,12 +22,3 @@ model User {
   updateAt DateTime @updatedAt
 
 }
-
-model Plats{
-  id String @id @map("_id") @default(auto()) @db.ObjectId
-  nom String
-  prix String
-  menu Menu?
-  publié Boolean @default(false)
-
-}
