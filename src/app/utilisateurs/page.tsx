@@ -21,6 +21,7 @@ export default function Utilisateurs() {
         </div>
         <table className={styles.table}>
           <thead>
+            <td>Id</td>
             <td>Nom</td>
             <td>Email</td>
             <td>Créer le</td>
@@ -29,6 +30,7 @@ export default function Utilisateurs() {
             <td>Action</td>
           </thead>
           <tbody>
+            <td>001</td>
             <td>
               <div className={styles.user}>
                 <Image

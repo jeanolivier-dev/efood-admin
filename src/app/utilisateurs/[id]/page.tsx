@@ -11,16 +11,10 @@ export default function SingleUserPage() {
           <div className={styles.imgContainer}>
             <Image src={userImage} alt="#" fill />
           </div>
-          John Doe
+          Restaurant La Tulipe
         </div>
         <div className={styles.formContainer}>
           <form className={styles.form}>
-            <label>Nom d&apos;utilisateur</label>
-            <input
-              type="text"
-              name="nom d'utilisateur"
-              placeholder="John Doe"
-            />
             <label>Nom du restaurant</label>
             <input
               type="text"

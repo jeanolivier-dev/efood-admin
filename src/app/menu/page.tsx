@@ -21,6 +21,7 @@ export default function Menu() {
         </div>
         <table className={styles.table}>
           <thead>
+            <td>Id</td>
             <td>Nom</td>
             <td>Decription</td>
             <td>Nbre de plats</td>
@@ -28,6 +29,7 @@ export default function Menu() {
             <td>Action</td>
           </thead>
           <tbody>
+            <td>001</td>
             <td>
               <div className={styles.user}>
                 <Image
