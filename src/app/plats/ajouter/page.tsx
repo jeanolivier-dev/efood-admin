@@ -2,6 +2,9 @@ import Layout from "@/components/ui/layout/globalLayout";
 import styles from "./ajouterUnPlat.module.css";
 
 export default function AjouterUnPlat() {
+
+  
+
   return (
     <Layout>
       <div className={styles.container}>

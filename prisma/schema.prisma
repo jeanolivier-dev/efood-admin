@@ -22,3 +22,40 @@ model User {
   updateAt DateTime @updatedAt
 
 }
+
+model Plats {
+	id String @id @map("_id") @default(auto()) @db.ObjectId
+	name String
+	description String
+	img String
+	price Int
+	menu String[] @db.ObjectId
+	online Boolean @default(true)
+	createdAt DateTime @default(now())
+
+
+}
+
+model Menu {
+	id String @id @map("_id") @default(auto()) @db.ObjectId
+	name String
+	description String
+	img String
+	online Boolean @default(true)
+	createdAt DateTime @default(now())
+
+}
+
+
+model Client {
+	id String @id @map("_id") @default(auto()) @db.ObjectId
+	img String
+	name String
+	email String @unique
+	password String
+	phone Int
+	adress String
+	isAdmin Boolean @default (true)
+	isActive Boolean @default (true)
+
+}
