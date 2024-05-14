@@ -6,8 +6,17 @@ import product_image from "@/assets/img/noproduct.jpg";
 import Link from "next/link";
 import Pagination from "@/components/pagination/pagination";
 import { MdAdd } from "react-icons/md";
+import client from "@/libs/prismadb"
+import {DeleteMenu} from "@/action/menu";
+import MenuList from "@/app/menu/ajouter/MenuList";
 
-export default function Menu() {
+export default async function Menu() {
+  const menu = await client.menu.findMany()
+
+  async function handleDelete(id:string){
+    await DeleteMenu(id)
+  }
+
   return (
     <Layout>
       <div className={styles.container}>
@@ -28,38 +37,10 @@ export default function Menu() {
             <td>Créer le</td>
             <td>Action</td>
           </thead>
-          <tbody>
-            <td>001</td>
-            <td>
-              <div className={styles.user}>
-                <Image
-                  src={product_image}
-                  alt=""
-                  width={40}
-                  height={40}
-                  className={styles.userImage}
-                />
-                Entrées
-              </div>
-            </td>
-            <td>Lorem Ipsum...</td>
-            <td>4</td>
-            <td>02.03.2024</td>
-            <td>
-              <div className={styles.buttons}>
-                <Link href="/menu/test">
-                  <button className={`${styles.button} ${styles.view}`}>
-                    Modifier
-                  </button>
-                </Link>
-                <button className={`${styles.button} ${styles.delete}`}>
-                  Supprimer
-                </button>
-              </div>
-            </td>
-          </tbody>
+          {menu.length === 0 && <p>Aucun menu pour l&apos;instant</p>}
+          <MenuList menu={menu}/>
         </table>
-        <Pagination />
+        <Pagination/>
       </div>
     </Layout>
   );

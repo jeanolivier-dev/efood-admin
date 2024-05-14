@@ -5,9 +5,9 @@ import product_image from "@/assets/img/noproduct.jpg";
 import Link from "next/link";
 import Pagination from "@/components/pagination/pagination";
 import Layout from "@/components/ui/layout/globalLayout";
-import { MdAdd } from "react-icons/md";
+import { MdAdd } from "react-icons/md"
 
-export default function Plats() {
+export default async function Plats() {
   return (
     <Layout>
       <div className={styles.container}>

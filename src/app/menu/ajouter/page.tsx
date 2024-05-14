@@ -5,13 +5,14 @@ import {z} from "zod"
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
+import {NewMenu} from "@/action/menu"
 
 
 const AddMenuSchema = z.object({
   name: z.string(),
   description: z.string(),
 })
-type TAddMenuSchema = z.infer<typeof AddMenuSchema>
+export type TAddMenuSchema = z.infer<typeof AddMenuSchema>
 
 export default function AjouterUnMenu() {
 
@@ -26,14 +27,7 @@ export default function AjouterUnMenu() {
   const router = useRouter()
 
 async function submitHandler(data : TAddMenuSchema) {
-  const response = await fetch("/api/newMenu", {
-    method: "POST",
-    body: JSON.stringify(data)
-  })
-
-  if (response.ok) router.push("/menu");
-
-  console.log(response)
+  NewMenu(data).then(res => router.push("/menu"))
   }
 
 
@@ -49,7 +43,7 @@ async function submitHandler(data : TAddMenuSchema) {
             placeholder="Description"
             {...register("description")}
           />
-          <button type="submit">Ajouter</button>
+          <button type="submit" disabled={isSubmitting}>Ajouter</button>
         </form>
       </div>
     </Layout>
