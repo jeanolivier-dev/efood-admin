@@ -29,7 +29,7 @@ model Plats {
 	description String
 	img String
 	price Int
-	menu String[] @db.ObjectId
+	menu String @db.ObjectId
 	online Boolean @default(true)
 	createdAt DateTime @default(now())
 
