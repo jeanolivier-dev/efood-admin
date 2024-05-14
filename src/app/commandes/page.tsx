@@ -32,7 +32,7 @@ export default function Commandes() {
                 </span>
               </td>
               <td>14.02.2024</td>
-              <td>25.000fCFA</td>
+              <td>25.000 CFA</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href="/">
@@ -56,7 +56,7 @@ export default function Commandes() {
                 </span>
               </td>
               <td>14.02.2024</td>
-              <td>25.000fCFA</td>
+              <td>25.000 CFA</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href="/">
@@ -80,7 +80,7 @@ export default function Commandes() {
                 </span>
               </td>
               <td>14.02.2024</td>
-              <td>25.000fCFA</td>
+              <td>25.000 CFA</td>
               <td>
                 <div className={styles.buttons}>
                   <Link href="/">

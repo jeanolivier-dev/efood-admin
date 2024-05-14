@@ -35,7 +35,7 @@ export default function Transactions() {
               </span>
             </td>
             <td>14.02.2024</td>
-            <td>25.000fCFA</td>
+            <td>25.000 CFA</td>
           </tr>
           <tr>
             <td>
@@ -54,7 +54,7 @@ export default function Transactions() {
               <span className={`${styles.status} ${styles.done}`}>Terminé</span>
             </td>
             <td>14.02.2024</td>
-            <td>25.000fCFA</td>
+            <td>25.000 CFA</td>
           </tr>
           <tr>
             <td>
@@ -75,7 +75,7 @@ export default function Transactions() {
               </span>
             </td>
             <td>14.02.2024</td>
-            <td>25.000fCFA</td>
+            <td>25.000 CFA</td>
           </tr>
         </tbody>
       </table>

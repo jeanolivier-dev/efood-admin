@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
     const {name, description, price} = await req.json()
 
     try {
-        const newDishes = await client.plats.create({data:{
+        const newDishe = await client.plats.create({data:{
             name, description, price, img : "test", online : true
             }})
         return NextResponse.json("Le plat a été créé")

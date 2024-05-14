@@ -43,7 +43,7 @@ export default function Plats() {
               </div>
             </td>
             <td>Banane frite à l&apos;huile de palme...</td>
-            <td>500fCFA</td>
+            <td>500 CFA</td>
             <td>02.03.2024</td>
             <td>
               <div className={styles.buttons}>
