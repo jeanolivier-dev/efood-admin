@@ -6,6 +6,7 @@ import Link from "next/link";
 import Pagination from "@/components/pagination/pagination";
 import Layout from "@/components/ui/layout/globalLayout";
 import { MdAdd } from "react-icons/md"
+import DisheList from "./ajouter/DisheList";
 
 export default async function Plats() {
   return (
@@ -28,36 +29,7 @@ export default async function Plats() {
             <td>Créer le</td>
             <td>Action</td>
           </thead>
-          <tbody>
-            <td>001</td>
-            <td>
-              <div className={styles.user}>
-                <Image
-                  src={product_image}
-                  alt=""
-                  width={40}
-                  height={40}
-                  className={styles.userImage}
-                />
-                Alloco
-              </div>
-            </td>
-            <td>Banane frite à l&apos;huile de palme...</td>
-            <td>500 CFA</td>
-            <td>02.03.2024</td>
-            <td>
-              <div className={styles.buttons}>
-                <Link href="/plats/test">
-                  <button className={`${styles.button} ${styles.view}`}>
-                    Voir
-                  </button>
-                </Link>
-                <button className={`${styles.button} ${styles.delete}`}>
-                  Supprimer
-                </button>
-              </div>
-            </td>
-          </tbody>
+          <DisheList/>
         </table>
         <Pagination />
       </div>

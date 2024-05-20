@@ -6,12 +6,13 @@ import client from "@/libs/prismadb";
 
 
 
+
 export default async function AjouterUnPlat() {
-  const menu = await client.menu.findMany()
+  const plats = await client.plats.findMany()
   return (
     <Layout>
       <div className={styles.container}>
-        <Form menu={menu}/>
+        <Form plats={plats}/>
       </div>
     </Layout>
   );

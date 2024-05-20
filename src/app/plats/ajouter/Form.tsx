@@ -1,10 +1,12 @@
 "use client"
+
 import styles from "@/app/plats/ajouter/ajouterUnPlat.module.css";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useRouter} from "next/navigation";
 import {z} from "zod";
-import {TMenu} from "@/app/menu/ajouter/MenuList";
+import {TPlat} from "@/app/plats/ajouter/DisheList";
+import { TMenu } from "@/app/menu/ajouter/MenuList";
 
 const AddDisheSchema = z.object({
     name: z.string(),
@@ -14,9 +16,9 @@ const AddDisheSchema = z.object({
         z.number().positive().min(1)
     ),
 })
-type TAddDisheSchema = z.infer<typeof AddDisheSchema>
+export type TAddDisheSchema = z.infer<typeof AddDisheSchema>
 
-export default function Form({menu}:{menu : TMenu}){
+export default function Form({menu}:{menu : TPlat}){
     const {
         register,
         handleSubmit,

@@ -1,6 +1,6 @@
 "use server"
 import client from "@/libs/prismadb";
-import {type TAddMenuSchema} from "@/app/menu/ajouter/page";
+import {type TAddMenuSchema} from "@/app/menu/ajouter/Form";
 import {revalidatePath} from "next/cache";
 
 export async function NewMenu(data:TAddMenuSchema) {
