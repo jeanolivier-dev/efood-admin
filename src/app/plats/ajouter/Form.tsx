@@ -1,12 +1,11 @@
 "use client"
-
 import styles from "@/app/plats/ajouter/ajouterUnPlat.module.css";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useRouter} from "next/navigation";
 import {z} from "zod";
-import {TPlat} from "@/app/plats/ajouter/DisheList";
-import { TMenu } from "@/app/menu/ajouter/MenuList";
+import {NewDishe} from "@/action/plats";
+import {TMenu} from "@/app/menu/MenuList";
 
 const AddDisheSchema = z.object({
     name: z.string(),
@@ -15,13 +14,18 @@ const AddDisheSchema = z.object({
         (a) => parseInt(z.string().parse(a), 10),
         z.number().positive().min(1)
     ),
+  online : z.preprocess(
+    (a) => parseInt(z.string().parse(a), 10),
+    z.number()
+  ),
+  menu : z.string()
 })
 export type TAddDisheSchema = z.infer<typeof AddDisheSchema>
 
-export default function Form({menu}:{menu : TPlat}){
+export default function Form({menu}:{menu : TMenu}){
     const {
         register,
-        handleSubmit,
+        handleSubmit,reset,
         formState: { errors,isSubmitting },
     } = useForm<TAddDisheSchema>({
         resolver: zodResolver(AddDisheSchema),
@@ -30,31 +34,24 @@ export default function Form({menu}:{menu : TPlat}){
     const router = useRouter()
 
     async function submitHandler(data : TAddDisheSchema) {
-        const response = await fetch("/api/newDishe", {
-            method: "POST",
-            body: JSON.stringify(data)
-        })
-
-        if (response.ok) router.push("/plats");
-
-        console.log(response)
+      NewDishe(data).then(res =>reset()).catch(err => console.log(err))
     }
     return (
         <form onSubmit={handleSubmit(submitHandler)} className={styles.form}>
             <input placeholder="Nom" {...register("name")} />
-            <select name="menu" id="menu">
+            <select  id="menu" {...register("menu")}>
                 <option value="general">Choisir un Menu</option>
                 {menu.map(({id,name}) => (
-                    <option key={id} value="entrées">{name}</option>
+                    <option key={id} value={id}>{name}</option>
                 ))}
             </select>
             <input  {...register("price")} placeholder="Prix"/>
             {errors.price && <p>{errors.price.message}</p>}
             <input type="file" name="image" accept="image/*"/>
-            <select name="isActive" id="isActive">
+            <select id="isActive" {...register("online")}>
                 <option value="Général">En ligne ?</option>
-                <option value={"true"}>Oui</option>
-                <option value={"false"}>Non</option>
+                <option value={1}>Oui</option>
+                <option value={0}>Non</option>
             </select>
             <textarea
                 rows={16}

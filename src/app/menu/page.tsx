@@ -1,14 +1,12 @@
 import Layout from "@/components/ui/layout/globalLayout";
 import styles from "./menu.module.css";
 import Search from "@/components/search/search";
-import Image from "next/image";
-import product_image from "@/assets/img/noproduct.jpg";
 import Link from "next/link";
 import Pagination from "@/components/pagination/pagination";
 import { MdAdd } from "react-icons/md";
 import client from "@/libs/prismadb"
 import {DeleteMenu} from "@/action/menu";
-import MenuList from "@/app/menu/ajouter/MenuList";
+import MenuList from "@/app/menu/MenuList";
 
 export default async function Menu() {
   const menu = await client.menu.findMany()
