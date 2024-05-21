@@ -4,15 +4,15 @@ import Search from "@/components/search/search";
 import Link from "next/link";
 import Pagination from "@/components/pagination/pagination";
 import { MdAdd } from "react-icons/md";
-import client from "@/libs/prismadb"
-import {DeleteMenu} from "@/action/menu";
+import client from "@/libs/prismadb";
+import { DeleteMenu } from "@/action/menu";
 import MenuList from "@/app/menu/MenuList";
 
 export default async function Menu() {
-  const menu = await client.menu.findMany()
+  const menu = await client.menu.findMany();
 
-  async function handleDelete(id:string){
-    await DeleteMenu(id)
+  async function handleDelete(id: string) {
+    await DeleteMenu(id);
   }
 
   return (
@@ -28,17 +28,18 @@ export default async function Menu() {
         </div>
         <table className={styles.table}>
           <thead>
-            <td>Id</td>
-            <td>Nom</td>
-            <td>Decription</td>
-            <td>Nbre de plats</td>
-            <td>Créer le</td>
-            <td>Action</td>
+            <tr>
+              <td>Nom</td>
+              <td>Decription</td>
+              <td>Nbre de plats</td>
+              <td>Créer le</td>
+              <td>Action</td>
+            </tr>
           </thead>
           {menu.length === 0 && <p>Aucun menu pour l&apos;instant</p>}
-          <MenuList menu={menu}/>
+          <MenuList menu={menu} />
         </table>
-        <Pagination/>
+        <Pagination />
       </div>
     </Layout>
   );
